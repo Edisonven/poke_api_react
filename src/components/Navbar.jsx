@@ -12,8 +12,8 @@ const Navbar = () => {
         <NavLink className={`nav__link ${setActiveClass}`} to="/">
           Home
         </NavLink>
-        <NavLink className={`nav__link ${setActiveClass}`} to="/pokemon">
-          Pokemon
+        <NavLink className={`nav__link ${setActiveClass}`} to="/pokemones">
+          Pokemones
         </NavLink>
       </div>
     </div>
