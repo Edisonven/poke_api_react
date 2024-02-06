@@ -5,12 +5,17 @@ const Navbar = () => {
 
   return (
     <div className="navbar__container">
-      <NavLink className={setActiveClass} to="/">
-        Home
-      </NavLink>
-      <NavLink className={setActiveClass} to="/pokemon">
-        Pokemon
-      </NavLink>
+      <div>
+        <img className="navbar__img" src="/images/logo.png" alt="" />
+      </div>
+      <div className="navbar__links">
+        <NavLink className={`nav__link ${setActiveClass}`} to="/">
+          Home
+        </NavLink>
+        <NavLink className={`nav__link ${setActiveClass}`} to="/pokemon">
+          Pokemon
+        </NavLink>
+      </div>
     </div>
   );
 };
