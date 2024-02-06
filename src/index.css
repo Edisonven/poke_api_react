@@ -29,9 +29,13 @@ body {
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-  padding: 20px 50px;
-  background-color: #3dc03d;
+  padding: 20px 10px;
+  background-color: #c2d327;
   box-shadow: 5px 5px 7px black;
+  background-image: url(../public/images/Pok.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 .container__fondo {
   display: flex;
@@ -54,6 +58,7 @@ body {
   text-decoration: none;
   color: #fff;
   font-size: 1.3rem;
+  font-weight: 700;
 }
 .nav__link:hover {
   opacity: 70%;
@@ -65,5 +70,11 @@ body {
 @media (min-width: 576px) {
   .container__title {
     font-size: 3rem;
+  }
+  .nav__link {
+    font-size: 1.8rem;
+  }
+  .navbar__container {
+    padding: 20px 50px;
   }
 }
