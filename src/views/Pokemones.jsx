@@ -1,7 +1,7 @@
 const Pokemones = () => {
   return (
-    <div>
-      <h1>Hola</h1>
+    <div className="pokemon__container">
+      <h1 className="Pokemon__title">Selecciona un Pokemon</h1>
     </div>
   );
 };
