@@ -1,11 +1,15 @@
+import { Route, Routes } from "react-router-dom";
 import "./App.css";
 import Navbar from "./components/Navbar";
+import Home from "./views/Home";
 
 function App() {
   return (
     <div className="container">
       <Navbar></Navbar>
-      <h1 className="container__title">Bienvenido maestro Pokemon!</h1>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </div>
   );
 }
