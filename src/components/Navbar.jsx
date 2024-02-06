@@ -1,8 +1,16 @@
+import { NavLink } from "react-router-dom";
+
 const Navbar = () => {
+  const setActiveClass = ({ isActive }) => (isActive ? "active" : undefined);
+
   return (
-    <div>
-      <h1>Hola</h1>
-      <p>Pokemon</p>
+    <div className="navbar__container">
+      <NavLink className={setActiveClass} to="/">
+        Home
+      </NavLink>
+      <NavLink className={setActiveClass} to="/pokemon">
+        Pokemon
+      </NavLink>
     </div>
   );
 };
