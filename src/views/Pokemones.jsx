@@ -16,12 +16,13 @@ const Pokemones = () => {
       <input
         value={name}
         type="text"
-        name=""
-        id=""
+        className="pokemon__input"
         onChange={({ target }) => setName(target.value)}
         placeholder="Ingresa un nombre de Pokemon"
       />
-      <button onClick={irAPersonajes}>buscar</button>
+      <button className="pokemon__btn" onClick={irAPersonajes}>
+        BUSCAR
+      </button>
     </div>
   );
 };
