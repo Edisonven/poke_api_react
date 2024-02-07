@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Home from "./views/Home";
 import Pokemones from "./views/Pokemones";
+import Pokemon from "./views/Pokemon";
 
 function App() {
   return (
@@ -11,6 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/pokemones" element={<Pokemones />} />
+        <Route path="/pokemones/:name" element={<Pokemon />} />
       </Routes>
     </div>
   );
