@@ -5,13 +5,18 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 const Pokemones = () => {
-  const { pokemonName, setPokemonName, apiData } = useContext(PokemonContext);
+  const { pokemonName, setPokemonName, apiData, setPokemonDetail } =
+    useContext(PokemonContext);
 
   const navigate = useNavigate();
-
-  const handleOptionChange = (e) => {
-    setPokemonName(e.target.value);
+  const handleOptionChange = (event) => {
+    const { name, url } = apiData.find(
+      (pokemon) => pokemon.name === event.target.value
+    );
+    setPokemonName(name);
+    setPokemonDetail(url);
   };
+
   const irAPersonajes = () => {
     if (!pokemonName) {
       alert("Debes Seleccionar un Pokemon");
