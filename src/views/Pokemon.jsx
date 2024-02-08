@@ -3,14 +3,13 @@ import { useParams } from "react-router-dom";
 import { PokemonContext } from "../context/PokeContext";
 
 const Pokemon = () => {
-  const { pokemonName } = useContext(PokemonContext);
+  const { pokemonName, pokemonDetail } = useContext(PokemonContext);
   const { name } = useParams();
-  const newUrl = `https://pokeapi.co/api/v2/pokemon/${pokemonName}`;
 
   const [pokeParameter, setPokeParameter] = useState({});
 
   const getPokeApiName = async () => {
-    const respuesta = await fetch(newUrl);
+    const respuesta = await fetch(pokemonDetail);
     const data = await respuesta.json();
     setPokeParameter(data);
   };
