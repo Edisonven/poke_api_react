@@ -18,7 +18,7 @@ const Pokemon = () => {
 
   return (
     <div>
-      {pokeParameter.name === name ? (
+      {pokeParameter ? (
         <div className="card_container">
           <img
             className="card__img"
@@ -40,9 +40,7 @@ const Pokemon = () => {
             </div>
           </div>
         </div>
-      ) : (
-        <p>Personaje no encontrado</p>
-      )}
+      ) : null}
     </div>
   );
 };

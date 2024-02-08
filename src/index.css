@@ -148,4 +148,7 @@ body {
   .card_container {
     margin: 80px auto;
   }
+  .active {
+    -webkit-text-stroke: 0 white;
+  }
 }
