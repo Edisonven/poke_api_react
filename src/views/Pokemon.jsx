@@ -5,7 +5,6 @@ import { PokemonContext } from "../context/PokeContext";
 const Pokemon = () => {
   const { pokemonName, pokemonDetail } = useContext(PokemonContext);
   const { name } = useParams();
-
   const [pokeParameter, setPokeParameter] = useState({});
 
   const getPokeApiName = async () => {

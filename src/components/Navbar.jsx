@@ -5,7 +5,7 @@ const Navbar = () => {
     isActive ? "active" : "inactive inactive__2";
 
   return (
-    <div className="navbar__container">
+    <nav className="navbar__container">
       <div>
         <img className="navbar__img" src="/images/logo.png" alt="" />
       </div>
@@ -17,7 +17,7 @@ const Navbar = () => {
           Pokemones
         </NavLink>
       </div>
-    </div>
+    </nav>
   );
 };
 

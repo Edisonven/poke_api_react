@@ -3,20 +3,13 @@ import { useNavigate } from "react-router-dom";
 import { PokemonContext } from "../context/PokeContext";
 
 const Pokemones = () => {
-  const {
-    pokemonName,
-    setPokemonName,
-    apiData,
-    pokemonDetail,
-    setPokemonDetail,
-  } = useContext(PokemonContext);
+  const { pokemonName, setPokemonName, apiData, setPokemonDetail } =
+    useContext(PokemonContext);
 
   const navigate = useNavigate();
 
   const handleOptionChange = (e) => {
-    const { name, url } = apiData.find(
-      (pokemon) => pokemon.name === e.target.value
-    );
+    const { name, url } = apiData.find(({ name }) => name === e.target.value);
     setPokemonName(name);
     setPokemonDetail(url);
   };
@@ -31,9 +24,9 @@ const Pokemones = () => {
         <option className="pokemon__input" value="">
           SELECCIONA TU POKEMON
         </option>
-        {apiData.map((pokemon) => (
-          <option value={pokemon.name} key={pokemon.name}>
-            {pokemon.name.toLocaleUpperCase()}
+        {apiData.map(({ name }) => (
+          <option value={name} key={name}>
+            {name.toLocaleUpperCase()}
           </option>
         ))}
       </select>
