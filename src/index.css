@@ -94,8 +94,9 @@ body {
 
 .pokemon__btn {
   width: 100%;
-  height: 35px;
+  height: 38px;
   border-radius: 8px;
+  color: #fff;
 }
 .card_container {
   display: flex;

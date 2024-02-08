@@ -1,6 +1,8 @@
-import { useContext, useState } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
 import { PokemonContext } from "../context/PokeContext";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
 
 const Pokemones = () => {
   const { pokemonName, setPokemonName, apiData, setPokemonDetail } =
@@ -20,7 +22,7 @@ const Pokemones = () => {
   return (
     <div className="pokemon__container">
       <h1 className="Pokemon__title">Selecciona un Pokemon</h1>
-      <select onChange={(e) => handleOptionChange(e)}>
+      <Form.Select onChange={(e) => handleOptionChange(e)}>
         <option className="pokemon__input" value="">
           SELECCIONA TU POKEMON
         </option>
@@ -29,10 +31,10 @@ const Pokemones = () => {
             {name.toLocaleUpperCase()}
           </option>
         ))}
-      </select>
-      <button className="pokemon__btn" onClick={() => irAPersonajes()}>
-        BUSCAR
-      </button>
+      </Form.Select>
+      <Button className="pokemon__btn" variant="outline-light" onClick={() => irAPersonajes()}>
+        VER DETALLE
+      </Button>
     </div>
   );
 };
