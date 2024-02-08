@@ -18,21 +18,28 @@ const Pokemon = () => {
   useEffect(() => {
     getPokeApiName();
   }, [pokemonName]);
+
   return (
     <div>
       {pokeParameter.name === name ? (
         <div className="card_container">
           <img
             className="card__img"
-            src={pokeParameter.sprites.front_default}
+            src={pokeParameter.sprites.other.dream_world.front_default}
             alt=""
           />
           <div className="card__body">
             <p className="card__name"> {pokeParameter.name.toUpperCase()}</p>
             <p className="card__name">Hp: {pokeParameter.stats[0].base_stat}</p>
-            <p className="card__name">Atack: {pokeParameter.stats[1].base_stat}</p>
-            <p className="card__name">Defense: {pokeParameter.stats[2].base_stat}</p>
-            <p className="card__name">Type: {pokeParameter.types[0].type.name}</p>
+            <p className="card__name">
+              Atack: {pokeParameter.stats[1].base_stat}
+            </p>
+            <p className="card__name">
+              Defense: {pokeParameter.stats[2].base_stat}
+            </p>
+            <p className="card__name">
+              Type: {pokeParameter.types[0].type.name}
+            </p>
           </div>
         </div>
       ) : (

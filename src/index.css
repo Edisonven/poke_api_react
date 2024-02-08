@@ -102,10 +102,11 @@ body {
   margin: 50px 20px;
   border-radius: 20px;
   color: #fff;
-  padding: 0 15px;
+  padding: 15px;
+  gap: 20px;
 }
 .card__img {
-  width: 100%;
+  width: 60%;
 }
 .card__body {
   display: flex;
