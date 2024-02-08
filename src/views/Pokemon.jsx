@@ -28,15 +28,38 @@ const Pokemon = () => {
           />
           <div className="card__body">
             <p className="card__name"> {pokeParameter.name.toUpperCase()}</p>
-            <p className="card__name">Hp: {pokeParameter.stats[0].base_stat}</p>
+            <div className="pokemon__stat">
+              <span>{pokeParameter.stats[0].stat.name}</span>:
+              <span className="card__name">
+                {pokeParameter.stats[0].base_stat}
+              </span>
+            </div>
+            <div className="pokemon__stat">
+              <span>{pokeParameter.stats[1].stat.name}</span>:
+              <span className="card__name">
+                {pokeParameter.stats[1].base_stat}
+              </span>
+            </div>
+            <div className="pokemon__stat">
+              <span>{pokeParameter.stats[2].stat.name}</span>:
+              <span className="card__name">
+                {pokeParameter.stats[2].base_stat}
+              </span>
+            </div>
+            <div className="pokemon__stat">
+              <span>{pokeParameter.stats[3].stat.name}</span>:
+              <span className="card__name">
+                {pokeParameter.stats[3].base_stat}
+              </span>
+            </div>
+            <div className="pokemon__stat">
+              <span>{pokeParameter.stats[4].stat.name}</span>:
+              <span className="card__name">
+                {pokeParameter.stats[4].base_stat}
+              </span>
+            </div>
             <p className="card__name">
-              Atack: {pokeParameter.stats[1].base_stat}
-            </p>
-            <p className="card__name">
-              Defense: {pokeParameter.stats[2].base_stat}
-            </p>
-            <p className="card__name">
-              Type: {pokeParameter.types[0].type.name}
+              Type : {pokeParameter.types[0].type.name}
             </p>
           </div>
         </div>

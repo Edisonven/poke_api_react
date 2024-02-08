@@ -25,10 +25,11 @@ const Pokemones = () => {
   return (
     <div className="pokemon__container">
       <h1 className="Pokemon__title">Selecciona un Pokemon</h1>
-      <Form.Select onChange={(e) => handleOptionChange(e)}>
-        <option className="pokemon__input" value="">
-          SELECCIONA TU POKEMON
-        </option>
+      <Form.Select
+        className="pokemon__input"
+        onChange={(e) => handleOptionChange(e)}
+      >
+        <option value="">SELECCIONA TU POKEMON</option>
         {apiData?.map(({ name }) => (
           <option value={name} key={name}>
             {name.toLocaleUpperCase()}

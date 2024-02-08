@@ -110,12 +110,17 @@ body {
   gap: 20px;
 }
 .card__img {
-  width: 60%;
+  width: 50%;
 }
 .card__body {
   display: flex;
   flex-direction: column;
   gap: 10px;
+}
+.pokemon__stat {
+  display: flex;
+  align-items: center;
+  gap: 3px;
 }
 @media (min-width: 576px) {
   .container__title {
@@ -143,5 +148,8 @@ body {
   }
   .card__img {
     max-width: 300px;
+  }
+  .card_container {
+    margin: 80px auto;
   }
 }
