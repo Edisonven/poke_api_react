@@ -9,9 +9,9 @@ const Pokemones = () => {
     useContext(PokemonContext);
 
   const navigate = useNavigate();
-  const handleOptionChange = (event) => {
+  const handleOptionChange = (e) => {
     const { name, url } = apiData.find(
-      (pokemon) => pokemon.name === event.target.value
+      (pokemon) => pokemon.name === e.target.value
     );
     setPokemonName(name);
     setPokemonDetail(url);
