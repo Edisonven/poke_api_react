@@ -30,8 +30,11 @@ const Pokemon = () => {
             <div className="pokemon__stat">
               {pokeParameter.stats.map((stat) => (
                 <div key={stat.stat.name} className="pokemon__stat">
-                  <span>{stat.stat.name}</span>:{" "}
-                  <span className="card__name">{stat.base_stat}</span>
+                  <span>
+                    {stat.stat.name.charAt(0).toUpperCase() +
+                      stat.stat.name.slice(1)}
+                  </span>
+                  : <span className="card__name">{stat.base_stat}</span>
                 </div>
               ))}
             </div>
