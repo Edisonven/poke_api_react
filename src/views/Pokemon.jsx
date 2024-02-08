@@ -3,11 +3,11 @@ import { useParams } from "react-router-dom";
 import { PokemonContext } from "../context/PokeContext";
 
 const Pokemon = () => {
-  const { apiData } = useContext(PokemonContext);
+  const { pokemonName } = useContext(PokemonContext);
   const { name } = useParams();
   return (
     <div>
-      {apiData.name === name ? (
+      {pokemonName.name === name ? (
         <div className="card_container">
           <img
             className="card__img"

@@ -3,23 +3,25 @@ import { createContext, useState, useEffect } from "react";
 export const PokemonContext = createContext();
 
 const PokemonProvider = ({ children }) => {
-  const [name, setName] = useState("");
-  const apiUrl = `https://pokeapi.co/api/v2/pokemon/${name}`;
+  const [pokemonName, setPokemonName] = useState("");
+  const apiUrl = `https://pokeapi.co/api/v2/pokemon/`;
   const [apiData, setApiData] = useState([]);
 
   useEffect(() => {
-    const getApiData = async () => {
-      const respuesta = await fetch(apiUrl);
-      const data = await respuesta.json();
-
-      setApiData(data);
-    };
-
-    getApiData();
-  }, [name]);
+    try {
+      const getApiData = async () => {
+        const respuesta = await fetch(apiUrl);
+        const {results} = await respuesta.json();
+        setApiData(results);
+      };
+      getApiData();
+    } catch (error) {
+      alert(error);
+    }
+  }, []);
 
   return (
-    <PokemonContext.Provider value={{ apiData, setApiData, name, setName }}>
+    <PokemonContext.Provider value={{ apiData, setApiData,pokemonName,setPokemonName }}>
       {children}
     </PokemonContext.Provider>
   );
