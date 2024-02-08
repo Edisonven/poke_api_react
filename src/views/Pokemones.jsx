@@ -14,7 +14,6 @@ const Pokemones = () => {
     navigate(`/pokemones/${pokemonName}`);
   };
 
-  console.log(pokemonName)
   return (
     <div className="pokemon__container">
       <h1 className="Pokemon__title">Selecciona un Pokemon</h1>
