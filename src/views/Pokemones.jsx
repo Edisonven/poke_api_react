@@ -16,6 +16,9 @@ const Pokemones = () => {
     setPokemonDetail(url);
   };
   const irAPersonajes = () => {
+    if (!pokemonName) {
+      alert("Debes Seleccionar un Pokemon");
+    }
     navigate(`/pokemones/${pokemonName}`);
   };
 
@@ -26,13 +29,17 @@ const Pokemones = () => {
         <option className="pokemon__input" value="">
           SELECCIONA TU POKEMON
         </option>
-        {apiData.map(({ name }) => (
+        {apiData?.map(({ name }) => (
           <option value={name} key={name}>
             {name.toLocaleUpperCase()}
           </option>
         ))}
       </Form.Select>
-      <Button className="pokemon__btn" variant="outline-light" onClick={() => irAPersonajes()}>
+      <Button
+        className="pokemon__btn"
+        variant="outline-light"
+        onClick={() => irAPersonajes()}
+      >
         VER DETALLE
       </Button>
     </div>

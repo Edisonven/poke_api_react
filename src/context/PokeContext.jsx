@@ -1,5 +1,5 @@
 import { createContext, useState, useEffect } from "react";
-import "bootstrap/dist/css/bootstrap.min.css"
+import "bootstrap/dist/css/bootstrap.min.css";
 export const PokemonContext = createContext();
 
 const PokemonProvider = ({ children }) => {
@@ -7,6 +7,7 @@ const PokemonProvider = ({ children }) => {
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/`;
   const [apiData, setApiData] = useState([]);
   const [pokemonDetail, setPokemonDetail] = useState([]);
+  const [pokeParameter, setPokeParameter] = useState("");
 
   useEffect(() => {
     try {
@@ -30,6 +31,8 @@ const PokemonProvider = ({ children }) => {
         setPokemonName,
         pokemonDetail,
         setPokemonDetail,
+        pokeParameter,
+        setPokeParameter,
       }}
     >
       {children}

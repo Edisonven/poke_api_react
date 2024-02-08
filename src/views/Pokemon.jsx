@@ -1,11 +1,11 @@
-import { useContext, useEffect, useState } from "react";
+import { useContext, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { PokemonContext } from "../context/PokeContext";
 
 const Pokemon = () => {
-  const { pokemonName, pokemonDetail } = useContext(PokemonContext);
+  const { pokemonName, pokemonDetail, pokeParameter, setPokeParameter } =
+    useContext(PokemonContext);
   const { name } = useParams();
-  const [pokeParameter, setPokeParameter] = useState({});
 
   const getPokeApiName = async () => {
     const respuesta = await fetch(pokemonDetail);
