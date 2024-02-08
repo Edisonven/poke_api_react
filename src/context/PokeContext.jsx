@@ -6,7 +6,6 @@ const PokemonProvider = ({ children }) => {
   const [pokemonName, setPokemonName] = useState("");
   const apiUrl = `https://pokeapi.co/api/v2/pokemon/`;
   const [apiData, setApiData] = useState([]);
-  const [pokemonDetail, setPokemonDetail] = useState([]);
   const [pokeParameter, setPokeParameter] = useState("");
 
   useEffect(() => {
@@ -29,8 +28,6 @@ const PokemonProvider = ({ children }) => {
         setApiData,
         pokemonName,
         setPokemonName,
-        pokemonDetail,
-        setPokemonDetail,
         pokeParameter,
         setPokeParameter,
       }}

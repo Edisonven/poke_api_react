@@ -117,11 +117,7 @@ body {
   flex-direction: column;
   gap: 10px;
 }
-.pokemon__stat {
-  display: flex;
-  align-items: center;
-  gap: 3px;
-}
+
 @media (min-width: 576px) {
   .container__title {
     font-size: 3rem;
