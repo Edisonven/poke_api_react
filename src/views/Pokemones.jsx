@@ -1,4 +1,4 @@
-import { useContext } from "react";
+import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { PokemonContext } from "../context/PokeContext";
 import Form from "react-bootstrap/Form";
@@ -24,6 +24,9 @@ const Pokemones = () => {
     navigate(`/pokemones/${pokemonName}`);
   };
 
+  useEffect(() => {
+    setPokemonName("");
+  }, []);
   return (
     <div className="pokemon__container">
       <h1 className="Pokemon__title">Selecciona un Pokemon</h1>
